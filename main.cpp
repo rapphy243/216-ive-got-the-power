@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "src/factorial.hpp"
+#include "src/power.hpp"
 
 int main() {
-  std::cout << "The factorial of 5 is " << factorial(5) << std::endl;
+  std::cout << "12 to the power of 5 is " << naivePower(12, 5) << std::endl;
 }
