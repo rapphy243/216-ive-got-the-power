@@ -15,7 +15,11 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
-add_executable(power_test tests/power_test.cpp src/power.cpp)
+add_executable(nativePower_test tests/nativePower_test.cpp src/power.cpp)
+add_executable(unoptimizedPower_test tests/unoptimizedPower_test.cpp src/power.cpp)
+add_executable(optimizedPower_test tests/optimizedPower_test.cpp src/power.cpp)
 add_executable(main main.cpp src/power.cpp)
 
-target_link_libraries(power_test PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(nativePower_test PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(unoptimizedPower_test PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(optimizedPower_test PRIVATE Catch2::Catch2WithMain)
